@@ -166,7 +166,6 @@ route.post('/project', async(req, res) => {
 
 route.get("/portfolio/:id", async(req, res) => {
 
-    // const id = req.params.id;
 
     try {
         const data = await User.findById(req.params.id);
@@ -182,30 +181,6 @@ route.get("/portfolio/:id", async(req, res) => {
 
 
 })
-
-
-
-
-//     try {
-
-//         const val = await User.findOne({ _id: id })
-//         console.log(val);
-
-//         if (val) {
-
-
-//             // const n = await User.updateOne({ _id: id }, { $set: { dproject: dproject, dmentor: dmentor, ddesc: ddesc } });
-
-
-
-//         } else {
-//             res.status(422).json({ error: "Invalid cred" })
-//         }
-
-//     } catch (error) {
-//         console.log(error);
-//     }
-// })
 
 
 module.exports = route;
